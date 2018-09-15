@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "../../jenkins-x/test/myliles";
+package myliles;
+
+message GetRequest {
+  string id = 1;
+}
+
+message GetResponse {
+  string id = 1;
+}
+
+service Myliles {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
